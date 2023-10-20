@@ -6,6 +6,7 @@ import jakarta.persistence.NoResultException;
 import jakarta.persistence.TypedQuery;
 import pet.project.models.Location;
 import pet.project.models.User;
+import pet.project.utils.PersistenceUtil;
 
 import java.util.List;
 import java.util.Optional;

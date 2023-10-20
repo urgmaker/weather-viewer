@@ -1,7 +1,9 @@
 package pet.project.dao;
 
 import jakarta.persistence.*;
+import pet.project.exceptions.authentication.UserExistsException;
 import pet.project.models.User;
+import pet.project.utils.PersistenceUtil;
 
 import java.util.Optional;
 

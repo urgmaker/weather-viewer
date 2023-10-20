@@ -4,6 +4,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.Query;
 import pet.project.models.Session;
+import pet.project.utils.PersistenceUtil;
 
 import java.time.LocalDateTime;
 import java.util.Optional;
