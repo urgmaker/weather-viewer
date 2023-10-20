@@ -3,6 +3,7 @@ package pet.project.listeners;
 import jakarta.servlet.ServletContextEvent;
 import jakarta.servlet.ServletContextListener;
 import jakarta.servlet.annotation.WebListener;
+import pet.project.services.SessionService;
 
 import java.util.Calendar;
 import java.util.Date;
