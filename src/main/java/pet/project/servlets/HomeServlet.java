@@ -34,7 +34,7 @@ public class HomeServlet extends WeatherTrackerBaseServlet {
     private final WeatherApiService weatherApiService = new WeatherApiService();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, CookieNotFoundException, SessionExpiredException, WeatherApiCallException, WeatherApiCallException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, CookieNotFoundException, SessionExpiredException, WeatherApiCallException, WeatherApiCallException {
         log.info("Finding cookie with session id");
         Cookie[] cookies = req.getCookies();
         Cookie cookie = findCookieByName(cookies, "sessionId")
@@ -72,7 +72,7 @@ public class HomeServlet extends WeatherTrackerBaseServlet {
     }
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, CookieNotFoundException, SessionExpiredException, InvalidParameterException, LocationNotFoundException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, CookieNotFoundException, SessionExpiredException, InvalidParameterException, LocationNotFoundException {
         log.info("Finding cookie with session id");
         Cookie[] cookies = req.getCookies();
         Cookie cookie = findCookieByName(cookies, "sessionId")

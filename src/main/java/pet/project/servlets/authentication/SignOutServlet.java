@@ -17,11 +17,11 @@ import java.util.UUID;
 
 @Slf4j
 @WebServlet("/sign-out")
-public class SingOutServlet extends WeatherTrackerBaseServlet {
+public class SignOutServlet extends WeatherTrackerBaseServlet {
     private final SessionDao sessionDao = new SessionDao();
 
     @Override
-    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("Finding cookie with session id");
         Cookie[] cookies = req.getCookies();
         Cookie cookie = findCookieByName(cookies, "sessionId")

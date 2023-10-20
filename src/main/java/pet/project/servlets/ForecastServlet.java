@@ -32,7 +32,7 @@ public class ForecastServlet extends WeatherTrackerBaseServlet {
     private final ForecastService forecastService = new ForecastService();
 
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         log.info("Finding cookie with session id");
         Cookie[] cookies = req.getCookies();
         Cookie cookie = findCookieByName(cookies, "sessionId")
